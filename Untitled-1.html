@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hezi Agro Enterprise - Empowering farmers globally with financial support and virtual store solutions.">
+  <meta name="author" content="Hezi Agro Enterprise">
+  <meta name="keywords" content="Agriculture, Farming, Finance, Virtual Stores, Hezi Agro Enterprise">
+  <title>Hezi Agro Enterprise</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      scroll-margin-top: 60px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    /* Fade-in animations */
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Button hover effects */
+    .btn-hover:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn-hover:active {
+      transform: scale(0.95);
+    }
+
+    /* Tooltip styles */
+    .tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 0.875rem;
+      bottom: -10px;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .field:not(:focus):hover + .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Success popup style */
+    .success-popup {
+      background-color: rgba(0, 128, 0, 0.9);
+      color: white;
+      padding: 16px 24px;
+      border-radius: 8px;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+
+    .show-popup {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    /* Custom input focus styles */
+    .field:focus {
+      border-color: #4C9E6E;
+      box-shadow: 0 0 5px rgba(76, 158, 110, 0.8);
+    }
+    
+    /* Header background */
+    .header-bg {
+      background-image: url('/vecteezy_business-is-growing-businessman-showing-a-graph-of-rising_8015899.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .header-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .container-overlay {
+      position: relative;
+      z-index: 9;
+      text-align: right;
+    }
+  </style>
+</head>
+<body class="antialiased bg-gray-50 text-gray-900">
+  <!-- Background -->
+  <div class="background" aria-hidden="true" style="
+    background-image: url('/gradient-blue-abstract-background-smooth-dark-blue-with-black-vignette-studio.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+  "></div>
+  
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-black bg-opacity-75 text-white backdrop-filter backdrop-blur-md z-10">
+    <nav class="container mx-auto px-4 py-6 flex justify-between items-center" aria-label="Main Navigation">
+      <a href="#" class="text-2xl font-bold hover:text-blue-400 transition-colors">Hezi Agro Enterprise</a>
+      <ul class="hidden md:flex items-center space-x-6">
+        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="header-bg">
+    <div class="header-overlay"></div>
+    <div class="container-overlay text-white px-6 py-10">
+      <h1 class="text-4xl md:text-6xl font-bold drop-shadow-md">
+        Welcome to <span class="text-blue-400">Hezi Agro Enterprise</span>
+      </h1>
+      <p class="mt-4 text-lg md:text-xl font-light text-gray-300 drop-shadow-sm">
+        Innovating agriculture for a sustainable future.
+      </p>
+      <a href="#contact" class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md shadow-lg transition transform hover:scale-105">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Mission and Vision Section -->
+<section id="about" class="py-20 px-4 bg-transparent text-gray-800">
+
+  <!-- Decorative Divider -->
+  <div class="container mx-auto h-2 bg-gradient-to-r from-blue-500 via-purple-400 to-indigo-500 rounded-t-lg"></div>
+  
+  <div class="container mx-auto p-4 bg-gray-900 text-white rounded-b-lg">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold">Our Mission & Vision</h2>
+      <p class="text-gray-400">Driving progress for farmers with innovative ideas and sustainable solutions.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 shadow-lg p-8 rounded-lg card-hover">
+        <img src="/mission-icon.png" alt="Mission Icon" class="h-16 mx-auto mb-6">
+        <h3 class="text-2xl font-bold mb-4 text-center">Our Mission</h3>
+        <p class="text-gray-400 text-center">
+          Meeting the pressing financial needs of farmers globally, ensuring consistent support before produce reaches physical stores.
+        </p>
+      </div>
+      <div class="bg-gray-800 shadow-lg p-8 rounded-lg card-hover">
+        <img src="/vision-icon.png" alt="Vision Icon" class="h-16 mx-auto mb-6">
+        <h3 class="text-2xl font-bold mb-4 text-center">Our Vision</h3>
+        <p class="text-gray-400 text-center">
+          Creating virtual stores for zealous farmers worldwide to showcase and trade their produce seamlessly.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+<section id="contact" class="py-20 px-4 bg-transparent text-gray-800">
+  
+  <!-- Decorative Divider -->
+  <div class="container mx-auto h-2 bg-gradient-to-r from-indigo-500 via-blue-400 to-purple-500 rounded-t-lg"></div>
+  
+  <div class="container mx-auto p-4 text-center bg-gray-900 text-white rounded-b-lg">
+    <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+    <p class="text-gray-400 mb-8">We’d love to hear from you! Fill out the form below to reach us.</p>
+    <form class="mx-auto relative bg-gray-800 p-8 rounded-lg shadow-lg space-y-6" onsubmit="handleForm(event)">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="relative">
+          <label for="name" class="block text-left font-bold mb-2">Name</label>
+          <input type="text" id="name" name="name" required
+                 class="field w-full p-3 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 text-white"
+                 placeholder="Enter your name">
+          <div class="tooltip">Your full name</div>
+        </div>
+        <div class="relative">
+          <label for="email" class="block text-left font-bold mb-2">Email</label>
+          <input type="email" id="email" name="email" required
+                 class="field w-full p-3 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 text-white"
+                 placeholder="Enter your email">
+          <div class="tooltip">Your email address</div>
+        </div>
+      </div>
+      <div class="relative">
+        <label for="message" class="block text-left font-bold mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" required
+                  class="field w-full p-3 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 text-white"
+                  placeholder="Enter your message"></textarea>
+        <div class="tooltip">Your message to us</div>
+      </div>
+      <button type="submit"
+              class="w-full bg-blue-600 text-white font-bold py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        Send Message
+      </button>
+    </form>
+  </div>
+
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-gray-400">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Hezi Agro Enterprise. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Success Popup -->
+  <div id="success-popup" class="success-popup">
+    Thank you for contacting us! We will get back to you shortly.
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function handleForm(event) {
+      event.preventDefault();
+
+      // Validate inputs (you can expand this as needed)
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name === '' || email === '' || message === '') {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+      // Show success popup
+      const popup = document.getElementById('success-popup');
+      popup.classList.add('show-popup');
+
+      // Hide popup after 3 seconds
+      setTimeout(() => {
+        popup.classList.remove('show-popup');
+      }, 3000);
+
+      // Reset form fields
+      event.target.reset();
+    }
+    // find when user has scrolled to about section
+    const aboutSection = document.getElementById('about');
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > aboutSection.offsetTop - 100) {
+        header.classList.remove('bg-opacity-75')
+        header.classList.remove('backdrop-filter')
+        header.classList.remove('backdrop-blur-md')
+      } else {
+        header.classList.add('bg-opacity-75')
+        header.classList.add('backdrop-filter')
+        header.classList.add('backdrop-blur-md')
+      }
+    });
+  </script>
+</body>
+</html>
